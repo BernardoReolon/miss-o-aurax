@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão Aura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Missão Aura</h1>
+            <p class="subtitle">Exploração Planetária - Ano 2089</p>
+        </header>
+
+        <!-- Formulário do Quiz -->
+        <form id="quiz-form">
+            <div class="form-group">
+                <label for="nome">Nome do Tripulante:</label>
+                <input type="text" id="nome" required placeholder="Digite seu nome completo">
+            </div>
+
+            <div class="form-group">
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" id="data-nascimento" required>
+            </div>
+
+            <div class="question" data-pergunta="1">
+                <h3>1. Diante de uma falha crítica no motor principal da nave, qual é a sua primeira reação?</h3>
+                <label><input type="radio" name="p1" value="1" required> Consertar imediatamente as peças e corrigir a falha mecânica.</label>
+                <label><input type="radio" name="p1" value="2"> Analisar os logs do sistema e investigar a causa raiz do problema.</label>
+                <label><input type="radio" name="p1" value="3"> Testar uma rota alternativa e experimentar um método de emergência.</label>
+                <label><input type="radio" name="p1" value="4"> Organizar a equipe e definir prioridades de ação rápida.</label>
+            </div>
+
+            <div class="question" data-pergunta="2">
+                <h3>2. Qual tipo de atividade você prefere realizar em um novo acampamento?</h3>
+                <label><input type="radio" name="p2" value="1" required> Construir abrigos, estruturas e ferramentas de apoio.</label>
+                <label><input type="radio" name="p2" value="2"> Coletar amostras de solo, minerais e catalogar espécies desconhecidas.</label>
+                <label><input type="radio" name="p2" value="3"> Desbravar regiões distantes e mapear o terreno inexplorado.</label>
+                <label><input type="radio" name="p2" value="4"> Estabelecer protocolos de segurança e coordenar a distribuição de suprimentos.</label>
+            </div>
+
+            <div class="question" data-pergunta="3">
+                <h3>3. Como você prefere resolver conflitos ou impasses na equipe?</h3>
+                <label><input type="radio" name="p3" value="1" required> Propondo uma solução prática e mão na massa.</label>
+                <label><input type="radio" name="p3" value="2"> Baseando-se em dados lógicos, evidências e pesquisas científicas.</label>
+                <label><input type="radio" name="p3" value="3"> Buscando flexibilidade e novas alternativas fora do padrão.</label>
+                <label><input type="radio" name="p3" value="4"> Criando um plano estratégico e mediando a tomada de decisão.</label>
+            </div>
+
+            <div class="question" data-pergunta="4">
+                <h3>4. Qual palavra melhor define sua maior virtude profissional?</h3>
+                <label><input type="radio" name="p4" value="1" required> Construtor(a)</label>
+                <label><input type="radio" name="p4" value="2"> Investigador(a)</label>
+                <label><input type="radio" name="p4" value="3"> Explorador(a)</label>
+                <label><input type="radio" name="p4" value="4"> Estrategista</label>
+            </div>
+
+            <button type="submit" id="btn-descobrir">Descobrir o Perfil</button>
+        </form>
+
+        <!-- Tela de Resultado -->
+        <div id="resultado-container" class="hidden">
+            <h2>Resultado da Análise de Perfil</h2>
+            <div class="resultado-card">
+                <img id="perfil-img" src="" alt="Imagem do Perfil">
+                <div class="resultado-info">
+                    <p><strong>Tripulante:</strong> <span id="res-nome"></span> (<span id="res-idade"></span> anos)</p>
+                    <p><strong>Perfil Identificado:</strong> <span id="res-perfil"></span></p>
+                    <p><strong>Categoria:</strong> <span id="res-categoria"></span></p>
+                    <p><strong>Descrição:</strong> <span id="res-descricao"></span></p>
+                    <p><strong>Recomendação para a Missão:</strong> <span id="res-recomendacao"></span></p>
+                </div>
+            </div>
+            <button id="btn-refazer">-refaça-</button>
+        </div>
+
+        <p class="hidden-text">bezao</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

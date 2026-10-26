@@ -1,0 +1,215 @@
+:root {
+    --bg-color: #0b0f19;
+    --card-bg: #131b2e;
+    --primary-color: #00f0ff;
+    --secondary-color: #7000ff;
+    --text-color: #e2e8f0;
+    --text-muted: #94a3b8;
+    --accent-color: #10b981;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.1);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
+}
+
+.question {
+    background-color: #1a233a;
+    border-left: 4px solid var(--primary-color);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 0 6px 6px 0;
+}
+
+.question h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+.question label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.question input[type="radio"] {
+    margin-right: 10px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Tela de Resultado */
+.hidden {
+    display: none !important;
+}
+
+#resultado-container {
+    text-align: center;
+}
+
+#resultado-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.resultado-card {
+    background-color: #1a233a;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#perfil-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.resultado-info p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.resultado-info span {
+    color: var(--primary-color);
+}
+
+.hidden-text {
+    font-size: 0.75rem;
+    color: #334155;
+    text-align: center;
+    margin-top: 20px;
+    user-select: none;
+}
+
+/* Responsividade para telas abaixo de 500px */
+@media (max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .question {
+        padding: 12px;
+    }
+
+    .resultado-card {
+        padding: 15px;
+        text-align: center;
+    }
+
+    #perfil-img {
+        width: 110px;
+        height: 110px;
+    }
+}
